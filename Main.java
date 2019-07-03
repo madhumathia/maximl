@@ -17,7 +17,7 @@ public static void LongestSubstring(String s)
 	for (int i = 0; i < ch.length; i++) {
 		char current = ch[i];
 		if (flag[current]) {
-			res = Math.max(result, i - start);
+			res = Math.max(res, i - start);
 			for (int k = start; k < i; k++)
 			{
 				if (ch[k] == current)
@@ -33,7 +33,7 @@ public static void LongestSubstring(String s)
 		}
 	}
  
-	result = Math.max(ch.length - start, res);
+	res= Math.max(ch.length - start, res);
  
 	System.out.println(res);
 }
